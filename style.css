@@ -823,9 +823,8 @@ body {
   .mockup-section       { padding: 56px 0 32px; }
   .phones-showcase      { gap: 12px; padding: 0 16px 32px; align-items: flex-end; margin-top: 16px; }
   .mockup-section .section-header { margin-bottom: 0; }
-  .side-phone           { display: flex; }
-  .side-phone .phone-frame { zoom: 0.58; }
-  .featured-phone       { zoom: 0.72; }
+  .side-phone           { display: none; }
+  .featured-phone       { zoom: 0.85; }
 }
 
 /* Mobile — 768px */
@@ -860,9 +859,9 @@ body {
 
 /* Mobile — 520px */
 @media (max-width: 520px) {
-  .side-phone .phone-frame { zoom: 0.45; }
-  .featured-phone       { zoom: 0.58; }
-  .phones-showcase      { gap: 6px; }
+  .side-phone           { display: none; }
+  .featured-phone       { zoom: 0.75; }
+  .phones-showcase      { gap: 0; }
 }
 
 /* Petit mobile — 480px */
