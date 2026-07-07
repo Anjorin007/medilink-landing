@@ -753,6 +753,50 @@ body {
 /* dl responsive — géré dans le bloc responsive global ci-dessous */
 
 /* ======================================================
+   FAQ
+   ====================================================== */
+.faq { padding: 96px 0; background: var(--surface); }
+.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+
+.faq-item {
+  border-bottom: 1px solid var(--border-lt);
+}
+.faq-item:first-child { border-top: 1px solid var(--border-lt); }
+
+.faq-question {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 22px 4px;
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 16px; font-weight: 600;
+  color: var(--heading); text-align: left;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: var(--accent); }
+.faq-question[aria-expanded="true"] { color: var(--accent); }
+
+.faq-icon {
+  flex-shrink: 0; transition: transform 0.3s ease;
+  color: var(--text-muted);
+}
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 4px;
+}
+.faq-answer.open {
+  max-height: 300px;
+  padding: 0 4px 20px;
+}
+.faq-answer p {
+  font-size: 15px; color: var(--text-dim); line-height: 1.75;
+}
+
+/* ======================================================
    CONTACT — fond bg2
    ====================================================== */
 .contact { padding: 96px 0; background: var(--bg); }
@@ -861,8 +905,8 @@ body {
 
   /* tous les téléphones visibles dans le carrousel */
   .side-phone               { display: flex !important; }
-  .side-phone .phone-frame  { zoom: 0.78; }
-  .featured-phone           { zoom: 0.84; }
+  .side-phone .phone-frame  { zoom: 1; }
+  .featured-phone           { zoom: 1; }
 
   /* points du carrousel */
   .carousel-dots {

@@ -120,6 +120,23 @@ contactForm.addEventListener('submit', (e) => {
   }, 1200);
 });
 
+/* ---- FAQ ACCORDION ---- */
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    // ferme tous
+    document.querySelectorAll('.faq-question').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    // ouvre celui-ci si était fermé
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  });
+});
+
 /* ---- PHONE CAROUSEL DOTS ---- */
 (function() {
   const showcase = document.querySelector('.phones-showcase');
