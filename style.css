@@ -971,11 +971,19 @@ body {
   .section-sub          { font-size: 15px; }
   .section-header       { margin-bottom: 28px; }
 
-  .hero-title           { font-size: clamp(26px, 8vw, 42px); }
-  .hero-sub             { font-size: 15px; }
-  .hero-ctas            { flex-direction: column; align-items: stretch; width: 100%; }
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding: calc(var(--nav-h) + 16px) 20px 32px;
+    justify-content: center;
+  }
+  .hero-title           { font-size: clamp(28px, 9vw, 40px); line-height: 1.15; margin-bottom: 14px; }
+  .hero-sub             { font-size: 15px; margin-bottom: 24px; }
+  .hero-ctas            { flex-direction: column; align-items: stretch; width: 100%; margin-bottom: 28px; }
   .hero-ctas .btn       { width: 100%; justify-content: center; }
   .btn-lg               { padding: 13px 20px; font-size: 15px; }
+  .hero-stats           { gap: 12px; }
+  .stat-num             { font-size: 28px; }
 
   .feature-card         { padding: 22px 18px; }
 
