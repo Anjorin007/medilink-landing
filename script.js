@@ -121,20 +121,34 @@ contactForm.addEventListener('submit', (e) => {
 });
 
 /* ---- PHONE CAROUSEL DOTS ---- */
-const showcase = document.querySelector('.phones-showcase');
-const dots = document.querySelectorAll('.carousel-dot');
-if (showcase && dots.length) {
-  showcase.addEventListener('scroll', () => {
-    const idx = Math.round(showcase.scrollLeft / showcase.offsetWidth);
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-  }, { passive: true });
+(function() {
+  const showcase = document.querySelector('.phones-showcase');
+  const dots     = document.querySelectorAll('.carousel-dot');
+  if (!showcase || !dots.length) return;
+
+  function updateDots() {
+    const slides = showcase.querySelectorAll('.phone-wrap');
+    let closest = 0, minDist = Infinity;
+    slides.forEach((slide, i) => {
+      const dist = Math.abs(slide.offsetLeft - showcase.scrollLeft - showcase.offsetWidth / 2 + slide.offsetWidth / 2);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+  }
+
+  showcase.addEventListener('scroll', updateDots, { passive: true });
+  updateDots();
+
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
-      const idx = parseInt(dot.dataset.index);
-      showcase.scrollTo({ left: idx * showcase.offsetWidth, behavior: 'smooth' });
+      const idx    = parseInt(dot.dataset.index);
+      const slides = showcase.querySelectorAll('.phone-wrap');
+      if (slides[idx]) {
+        showcase.scrollTo({ left: slides[idx].offsetLeft, behavior: 'smooth' });
+      }
     });
   });
-}
+})();
 
 /* ---- ACTIVE NAV LINK ---- */
 const sections     = document.querySelectorAll('section[id]');
