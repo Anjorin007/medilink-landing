@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediLink — Télé-expertise médicale intelligente</title>
+  <meta name="description" content="MediLink connecte généralistes et spécialistes en temps réel. Triage IA, SLA garanti, RCP multi-experts. Conçu pour le Bénin." />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="icon.png" width="34" height="34" alt="MediLink" class="logo-img" />
+        <span>MediLink</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-ctas">
+        <a href="#download" class="btn btn-outline-dark btn-sm">Télécharger</a>
+        <a href="#contact" class="btn btn-teal btn-sm">Demander une démo</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#features">Fonctionnalités</a>
+      <a href="#how">Comment ça marche</a>
+      <a href="#testimonials">Témoignages</a>
+      <a href="#contact">Contact</a>
+      <a href="#download" class="btn btn-teal btn-sm" style="margin-top:8px">Télécharger l'app</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-title reveal">
+        La télé-expertise médicale<br/>
+        <span class="gradient-text">structurée et intelligente</span>
+      </h1>
+      <p class="hero-sub reveal">
+        MediLink connecte généralistes et spécialistes en temps réel.<br class="desktop-br"/>
+        Triage IA automatique, SLA garanti, RCP multi-experts intégrée.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#download" class="btn btn-teal btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="currentColor"/><path d="M20 20H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Télécharger l'application
+        </a>
+        <a href="#contact" class="btn btn-outline-hero btn-lg">
+          Demander une démo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="15">0</span><span class="stat-unit">min</span>
+          <span class="stat-label">Délai de réponse moyen</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="20">0</span><span class="stat-unit">+</span>
+          <span class="stat-label">Spécialités médicales</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-unit">niveaux</span>
+          <span class="stat-label">Triage par IA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust" id="trust">
+    <div class="trust-track-wrapper">
+      <div class="trust-track">
+        <!-- Série 1 -->
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CNHU-HKM</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Parakou</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Abomey</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Lokossa</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>Ordre des Médecins du Bénin</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Natitingou</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>Hôpital de Zone Cotonou</span></div>
+        <!-- Série 2 — copie pour boucle infinie -->
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CNHU-HKM</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Parakou</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Abomey</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Lokossa</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>Ordre des Médecins du Bénin</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>CHD Natitingou</span></div>
+        <div class="trust-item"><span class="trust-spin-wrap"><img src="icon.png" width="22" height="22" alt=""/></span><span>Hôpital de Zone Cotonou</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAQUETTES APP -->
+  <section class="mockup-section" id="app">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">L'application</p>
+        <h2 class="section-title">Conçue pour le terrain médical</h2>
+        <p class="section-sub">Interface pensée pour des médecins en situation réelle - rapide, claire, sans friction.</p>
+      </div>
+
+      <div class="phones-showcase">
+
+        <!-- Téléphone gauche — Généraliste home -->
+        <div class="phone-wrap side-phone reveal">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- Header -->
+              <div class="ps-header">
+                <span class="ps-header-title">MediLink</span>
+              </div>
+              <!-- Greeting -->
+              <div class="ps-greeting">
+                <div>
+                  <div class="ps-hello">Bonjour,</div>
+                  <div class="ps-name">Dr. Kouton</div>
+                  <div class="ps-hospital">CNHU-HKM</div>
+                </div>
+                <div class="ps-avatar">DK</div>
+              </div>
+              <!-- Bouton principal -->
+              <div class="ps-btn-primary">
+                <span>+</span> Nouvelle demande d'avis
+              </div>
+              <!-- Urgence vitale -->
+              <div class="ps-urgence">
+                <div class="ps-urgence-top">
+                  <span class="ps-urgence-icon">⚠</span>
+                  <span class="ps-urgence-badge">PRIORITÉ ABSOLUE</span>
+                </div>
+                <div class="ps-urgence-title">URGENCE VITALE</div>
+                <div class="ps-urgence-sub">Patient en danger immédiat — avis en moins de 2 min</div>
+                <div class="ps-urgence-btn">⚡ Déclencher l'alerte</div>
+              </div>
+              <!-- Stats -->
+              <div class="ps-stats">
+                <div class="ps-stat navy"><div class="ps-stat-n">3</div><div class="ps-stat-l">Cas ouverts</div></div>
+                <div class="ps-stat orange"><div class="ps-stat-n">3</div><div class="ps-stat-l">Urgents</div></div>
+                <div class="ps-stat teal"><div class="ps-stat-n">1</div><div class="ps-stat-l">Répondus</div></div>
+              </div>
+            </div>
+          </div>
+          <p class="phone-label">Généraliste</p>
+        </div>
+
+        <!-- Téléphone central — Créer un cas (featured) -->
+        <div class="phone-wrap center-phone reveal">
+          <div class="phone-frame featured-phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ps-header">
+                <span class="ps-back">←</span>
+                <span class="ps-header-title">Nouveau cas</span>
+              </div>
+              <div class="ps-form-section">
+                <div class="ps-form-label">Patient</div>
+                <div class="ps-form-row">
+                  <div class="ps-form-field">
+                    <div class="ps-field-label">Âge</div>
+                    <div class="ps-field-val">8 mois</div>
+                  </div>
+                  <div class="ps-form-field">
+                    <div class="ps-field-label">Sexe</div>
+                    <div class="ps-field-val">F</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ps-form-section">
+                <div class="ps-form-label">Constantes vitales</div>
+                <div class="ps-vitals">
+                  <div class="ps-vital"><span class="ps-vital-l">FC</span><span class="ps-vital-v rouge-val">162</span></div>
+                  <div class="ps-vital"><span class="ps-vital-l">FR</span><span class="ps-vital-v rouge-val">56</span></div>
+                  <div class="ps-vital"><span class="ps-vital-l">SpO₂</span><span class="ps-vital-v orange-val">88%</span></div>
+                  <div class="ps-vital"><span class="ps-vital-l">TA</span><span class="ps-vital-v">85/60</span></div>
+                  <div class="ps-vital"><span class="ps-vital-l">T°</span><span class="ps-vital-v orange-val">38.5</span></div>
+                </div>
+              </div>
+              <!-- Score IA -->
+              <div class="ps-ai-result">
+                <div class="ps-ai-label">Analyse IA — NEWS2</div>
+                <div class="ps-severity rouge-bg">
+                  <span class="ps-sev-dot"></span>
+                  ROUGE — Score 14
+                </div>
+                <div class="ps-ai-sub">Escalade réanimation sous 15 min</div>
+              </div>
+              <div class="ps-submit-btn">Envoyer au spécialiste →</div>
+            </div>
+          </div>
+          <p class="phone-label featured-label">Créer un cas · Analyse IA</p>
+        </div>
+
+        <!-- Téléphone droit — Spécialiste répond -->
+        <div class="phone-wrap side-phone reveal">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ps-header">
+                <span class="ps-back">←</span>
+                <span class="ps-header-title">Cas #1042</span>
+              </div>
+              <div class="ps-case-info">
+                <div class="ps-case-patient">Nourrisson F, 8 mois</div>
+                <div class="ps-sev-badge rouge-badge">ROUGE</div>
+              </div>
+              <div class="ps-case-block">
+                <div class="ps-block-label">Motif de consultation</div>
+                <div class="ps-block-text">Détresse respiratoire aiguë, tirage intercostal, SpO₂ 88%</div>
+              </div>
+              <div class="ps-case-block">
+                <div class="ps-block-label">Question du généraliste</div>
+                <div class="ps-block-text">Conduite à tenir urgente ? Intubation ou VNI ?</div>
+              </div>
+              <div class="ps-response-area">
+                <div class="ps-block-label">Votre avis</div>
+                <div class="ps-response-input">VNI en première intention. Préparer intubation si échec à 30 min...</div>
+              </div>
+              <div class="ps-submit-btn teal-btn">Envoyer l'avis ✓</div>
+            </div>
+          </div>
+          <p class="phone-label">Spécialiste</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / 3 PILIERS -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Ce que MediLink apporte</p>
+        <h2 class="section-title">Trois choses qui changent vraiment la pratique</h2>
+        <p class="section-sub">Pas une promesse de plus. Ce que les médecins utilisent chaque jour.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon teal">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Un triage qui ne se trompe pas</h3>
+          <p>Le généraliste saisit les constantes du patient. MediLink calcule le score NEWS2, détecte les signaux d'alarme et classe le cas immédiatement. Pas de calcul à la main. Pas d'oubli.</p>
+          <ul class="feature-checks">
+            <li>Triage VERT / ORANGE / ROUGE automatique</li>
+            <li>Score NEWS2 sur 5 constantes vitales</li>
+            <li>Escalade vers la réanimation si SLA dépassé</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal featured">
+          <div class="feature-badge">Coeur du système</div>
+          <div class="feature-icon teal">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="3" stroke="#17A589" stroke-width="2"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="#17A589" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Le bon spécialiste, au bon moment</h3>
+          <p>Plus besoin d'appeler dix numéros pour trouver un cardiologue disponible. MediLink identifie les spécialistes connectés dans la discipline concernée et leur soumet le cas directement. L'avis arrive dans les délais garantis.</p>
+          <ul class="feature-checks">
+            <li>20 spécialités médicales couvertes</li>
+            <li>Routage selon disponibilité en temps réel</li>
+            <li>Délai de réponse garanti selon la sévérité</li>
+          </ul>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon teal">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Tous ensemble autour du patient</h3>
+          <p>Certains cas nécessitent plusieurs regards. MediLink permet de réunir plusieurs spécialistes en visioconférence pour une Réunion de Concertation Pluridisciplinaire complète, directement depuis l'application.</p>
+          <ul class="feature-checks">
+            <li>RCP avec plusieurs spécialistes simultanément</li>
+            <li>Visioconférence intégrée sans application tierce</li>
+            <li>Dossier horodaté et archivé automatiquement</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ÇA MARCHE -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">En pratique</p>
+        <h2 class="section-title">Ce qui se passe en 3 minutes</h2>
+        <p class="section-sub">De la saisie du cas à l'avis du spécialiste. Sans téléphone, sans attente inutile.</p>
+      </div>
+
+      <!-- Timeline horizontale -->
+      <div class="how-timeline">
+
+        <div class="how-step reveal" data-step="1">
+          <div class="how-step-top">
+            <div class="how-step-num">01</div>
+            <div class="how-step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="#17A589" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#17A589" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3>Le médecin décrit ce qu'il voit</h3>
+          <p>Il saisit les constantes du patient, le motif de consultation et sa question. En quelques secondes, MediLink lit la situation et calcule le niveau d'urgence.</p>
+        </div>
+
+        <div class="how-arrow reveal">
+          <!-- flèche horizontale (desktop) -->
+          <svg class="arrow-h" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="12" x2="64" y2="12" stroke="#17A589" stroke-width="2" stroke-dasharray="6 4" class="how-arrow-line"/>
+            <path d="M64 6l10 6-10 6" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- flèche verticale (mobile) -->
+          <svg class="arrow-v" viewBox="0 0 24 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="12" y1="0" x2="12" y2="44" stroke="#17A589" stroke-width="2" stroke-dasharray="6 4" class="how-arrow-line"/>
+            <path d="M6 44l6 10 6-10" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="how-step reveal" data-step="2">
+          <div class="how-step-top">
+            <div class="how-step-num">02</div>
+            <div class="how-step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="3" stroke="#17A589" stroke-width="2"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#17A589" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3>MediLink trouve le bon interlocuteur</h3>
+          <p>Parmi les spécialistes connectés dans la discipline concernée, MediLink envoie le cas à celui qui peut répondre maintenant. Pas dans trois jours.</p>
+        </div>
+
+        <div class="how-arrow reveal">
+          <!-- flèche horizontale (desktop) -->
+          <svg class="arrow-h" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="12" x2="64" y2="12" stroke="#17A589" stroke-width="2" stroke-dasharray="6 4" class="how-arrow-line"/>
+            <path d="M64 6l10 6-10 6" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- flèche verticale (mobile) -->
+          <svg class="arrow-v" viewBox="0 0 24 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="12" y1="0" x2="12" y2="44" stroke="#17A589" stroke-width="2" stroke-dasharray="6 4" class="how-arrow-line"/>
+            <path d="M6 44l6 10 6-10" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="how-step reveal" data-step="3">
+          <div class="how-step-top">
+            <div class="how-step-num">03</div>
+            <div class="how-step-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="#17A589" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12c0 4.97-4.03 9-9 9a9 9 0 01-9-9c0-4.97 4.03-9 9-9s9 4.03 9 9z" stroke="#17A589" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <h3>L'avis arrive. On peut agir.</h3>
+          <p>Le spécialiste répond avec ses recommandations. Si le cas est complexe, il peut réunir d'autres experts en visioconférence. Tout est tracé, archivé, accessible.</p>
+        </div>
+
+      </div>
+
+      <!-- Sévérité -->
+      <div class="sev-band reveal">
+        <p class="sev-band-label">Délais garantis selon la sévérité</p>
+        <div class="sev-cards">
+
+          <div class="sev-card sev-vert">
+            <div class="sev-dot"></div>
+            <div class="sev-name">VERT</div>
+            <div class="sev-time">24 heures</div>
+            <div class="sev-desc">Cas stable, suivi programmé</div>
+          </div>
+
+          <div class="sev-card sev-orange">
+            <div class="sev-dot"></div>
+            <div class="sev-name">ORANGE</div>
+            <div class="sev-time">2 heures</div>
+            <div class="sev-desc">Situation préoccupante, avis urgent</div>
+          </div>
+
+          <div class="sev-card sev-rouge">
+            <div class="sev-dot sev-dot-pulse"></div>
+            <div class="sev-name">ROUGE</div>
+            <div class="sev-time">15 minutes</div>
+            <div class="sev-desc">Urgence vitale, escalade immédiate</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="testimonials dark-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Témoignages</p>
+        <h2 class="section-title">Ce que disent les médecins</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"MediLink m'a permis d'avoir un avis cardiologique en 10 minutes pour un patient en détresse. Le score de sévérité m'a confirmé que c'était urgent. Le spécialiste a tout de suite compris la gravité."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <span class="author-name">Dr Amina Kouton</span>
+              <span class="author-role">Médecin Généraliste · Cotonou</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal featured-testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"En tant que cardiologue, je reçois les cas déjà triés par sévérité avec toutes les constantes. Je peux me concentrer sur l'essentiel. La RCP multi-experts est révolutionnaire pour les cas complexes."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar teal-bg">FD</div>
+            <div class="author-info">
+              <span class="author-name">Dr Fabrice Dossou</span>
+              <span class="author-role">Cardiologue · CNHU-HKM · Cotonou</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"L'interface est simple et rapide. Je peux utiliser MediLink depuis n'importe quel hôpital, sur mon téléphone comme sur mon ordinateur. C'est exactement ce dont nous avions besoin."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MB</div>
+            <div class="author-info">
+              <span class="author-name">Dr Marie Boco</span>
+              <span class="author-role">Pédiatre · CHD Parakou</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="download" id="download">
+    <div class="container">
+
+      <!-- MÉDECINS -->
+      <div class="dl-block reveal">
+        <div class="dl-block-text">
+          <p class="section-eyebrow">Pour les médecins</p>
+          <h2 class="dl-block-title">Téléchargez MediLink</h2>
+          <p class="dl-block-sub">Gratuit, disponible maintenant. Créez votre compte en 2 minutes.</p>
+        </div>
+        <div class="dl-store-btns">
+          <!-- Android -->
+          <a href="#" class="dl-store android-btn">
+            <div class="dl-store-icon">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.523 15.34l1.96-3.39a.5.5 0 10-.866-.5l-1.986 3.44a12.02 12.02 0 01-9.26 0L5.383 11.45a.5.5 0 10-.866.5l1.96 3.39A10.5 10.5 0 001 24h22a10.5 10.5 0 00-5.477-8.66zM8.5 20a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm7 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM2 9.5C2 5.364 6.477 2 12 2s10 3.364 10 7.5H2z"/>
+              </svg>
+            </div>
+            <div class="dl-store-text">
+              <span class="dl-store-sub">Disponible sur</span>
+              <span class="dl-store-name">Android APK</span>
+            </div>
+          </a>
+          <!-- iOS -->
+          <a href="#" class="dl-store ios-btn">
+            <div class="dl-store-icon">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+            </div>
+            <div class="dl-store-text">
+              <span class="dl-store-sub">Disponible sur</span>
+              <span class="dl-store-name">iPhone iOS</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Écrivez-nous</h2>
+        <p class="section-sub">Réponse sous 24h -<a href="mailto:contact@medilink.bj" style="color:var(--accent);text-decoration:none;font-weight:600">contact@medilink.bj</a></p>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Dr Amina Kouton" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="dr.kouton@cnhu.bj" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre question ou demande..."></textarea>
+        </div>
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-teal btn-lg">
+            Envoyer le message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">Message envoyé ! On vous répond sous 24h.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <img src="icon.png" width="34" height="34" alt="MediLink" class="logo-img" />
+            <span>MediLink</span>
+          </a>
+          <p class="footer-tagline">La télé-expertise médicale au Bénin.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Application</h4>
+          <a href="#features">Fonctionnalités</a>
+          <a href="#how">Comment ça marche</a>
+          <a href="#download">Télécharger</a>
+          <a href="#testimonials">Témoignages</a>
+        </div>
+        <div class="footer-links">
+          <h4>Légal</h4>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">Conformité APDP 2009</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:contact@medilink.bj">contact@medilink.bj</a>
+          <a href="#">Demander une démo</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MediLink. Tous droits réservés. Fait au Bénin 🇧🇯</p>
+        <p>Données hébergées au Bénin · Conforme APDP 2009</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
