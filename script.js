@@ -120,6 +120,22 @@ contactForm.addEventListener('submit', (e) => {
   }, 1200);
 });
 
+/* ---- PHONE CAROUSEL DOTS ---- */
+const showcase = document.querySelector('.phones-showcase');
+const dots = document.querySelectorAll('.carousel-dot');
+if (showcase && dots.length) {
+  showcase.addEventListener('scroll', () => {
+    const idx = Math.round(showcase.scrollLeft / showcase.offsetWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, { passive: true });
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.dataset.index);
+      showcase.scrollTo({ left: idx * showcase.offsetWidth, behavior: 'smooth' });
+    });
+  });
+}
+
 /* ---- ACTIVE NAV LINK ---- */
 const sections     = document.querySelectorAll('section[id]');
 const navLinksList = document.querySelectorAll('.nav-links a');
