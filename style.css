@@ -977,7 +977,8 @@ body {
     padding: calc(var(--nav-h) + 16px) 20px 32px;
     justify-content: center;
   }
-  .hero-title           { font-size: clamp(28px, 9vw, 40px); line-height: 1.15; margin-bottom: 14px; }
+  .hero-title           { font-size: clamp(24px, 7.5vw, 36px); line-height: 1.2; margin-bottom: 14px; }
+  .hero-title .gradient-text { font-size: clamp(22px, 6.5vw, 32px); white-space: nowrap; }
   .hero-sub             { font-size: 15px; margin-bottom: 24px; }
   .hero-ctas            { flex-direction: column; align-items: stretch; width: 100%; margin-bottom: 28px; }
   .hero-ctas .btn       { width: 100%; justify-content: center; }
