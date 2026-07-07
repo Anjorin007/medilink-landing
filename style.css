@@ -820,11 +820,12 @@ body {
 
 /* Tablette — 900px */
 @media (max-width: 900px) {
-  .phones-showcase      { gap: 12px; padding: 20px 16px 40px; align-items: flex-end; margin-top: 24px; }
+  .mockup-section       { padding: 56px 0 32px; }
+  .phones-showcase      { gap: 12px; padding: 0 16px 32px; align-items: flex-end; margin-top: 16px; }
+  .mockup-section .section-header { margin-bottom: 0; }
   .side-phone           { display: flex; }
   .side-phone .phone-frame { zoom: 0.58; }
   .featured-phone       { zoom: 0.72; }
-  .mockup-section       { padding: 60px 0 40px; }
 }
 
 /* Mobile — 768px */
