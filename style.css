@@ -726,23 +726,24 @@ body {
 .dl-store-sub  { font-size: 11px; font-weight: 500; }
 .dl-store-name { font-size: 17px; font-weight: 800; }
 
-/* Android — fond vert Android */
-.android-btn { background: #2CA25F; }
-.android-btn .dl-store-icon { background: rgba(255,255,255,0.15); }
-.android-btn .dl-store-sub  { color: rgba(255,255,255,0.75); }
-.android-btn .dl-store-name { color: #fff; }
-
-/* iOS — fond noir Apple */
-.ios-btn { background: #111; }
-.ios-btn .dl-store-icon { background: rgba(255,255,255,0.1); }
-.ios-btn .dl-store-sub  { color: rgba(255,255,255,0.65); }
-.ios-btn .dl-store-name { color: #fff; }
-
-/* Institution — fond primary */
-.inst-btn { background: var(--primary); }
-.inst-btn .dl-store-icon { background: rgba(255,255,255,0.1); }
-.inst-btn .dl-store-sub  { color: rgba(255,255,255,0.65); }
-.inst-btn .dl-store-name { color: #fff; }
+/* Badges store officiels */
+.dl-badge-btn {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.22s, box-shadow 0.22s;
+  flex-shrink: 0;
+}
+.dl-badge-btn img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+.dl-badge-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.25);
+}
 
 /* dl responsive — géré dans le bloc responsive global ci-dessous */
 
