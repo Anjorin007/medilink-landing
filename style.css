@@ -820,10 +820,11 @@ body {
 
 /* Tablette — 900px */
 @media (max-width: 900px) {
-  .phones-showcase      { gap: 12px; padding: 20px 16px 40px; align-items: flex-end; }
+  .phones-showcase      { gap: 12px; padding: 20px 16px 40px; align-items: flex-end; margin-top: 24px; }
   .side-phone           { display: flex; }
   .side-phone .phone-frame { zoom: 0.58; }
   .featured-phone       { zoom: 0.72; }
+  .mockup-section       { padding: 60px 0 40px; }
 }
 
 /* Mobile — 768px */
