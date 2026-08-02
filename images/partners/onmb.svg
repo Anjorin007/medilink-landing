@@ -1,0 +1,18 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="80" fill="white" rx="4"/>
+
+  <!-- Stethoscope Icon -->
+  <g transform="translate(20, 15)">
+    <circle cx="8" cy="8" r="6" stroke="#0D2137" stroke-width="2.5" fill="none"/>
+    <circle cx="32" cy="8" r="6" stroke="#0D2137" stroke-width="2.5" fill="none"/>
+    <path d="M 8 14 Q 20 35 20 45" stroke="#17A589" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="20" cy="45" r="8" fill="#17A589"/>
+    <circle cx="20" cy="45" r="5" fill="white"/>
+  </g>
+
+  <!-- Text -->
+  <text x="75" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#0D2137">ONMB</text>
+  <text x="75" y="46" font-family="Arial, sans-serif" font-size="8" font-weight="400" fill="#154360">Ordre National des</text>
+  <text x="75" y="56" font-family="Arial, sans-serif" font-size="8" font-weight="400" fill="#154360">Médecins du Bénin</text>
+</svg>
